@@ -1,0 +1,24 @@
+class Solution {
+    public String makeString (Stack <Character> stack) {
+        StringBuilder sb = new StringBuilder();
+        for (char ch: stack)
+            sb.append(ch);
+        return sb.toString();
+    }
+    public String addSpaces(String s, int[] spaces) {
+        Stack <Character> stack = new Stack<>();
+        Set <Integer> set = new HashSet<>();
+        for (int i: spaces)
+            set.add(i);
+        
+        int counter =0;
+        for (char ch: s.toCharArray()) {
+                if(set.contains(counter)) {
+                    stack.push(' ');
+                }
+            stack.push(ch);
+            counter++;
+        }
+        return makeString (stack);
+    }
+}
