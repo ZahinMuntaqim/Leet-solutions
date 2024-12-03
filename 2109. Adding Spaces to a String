@@ -25,7 +25,7 @@ class Solution {
 
 #2109. Adding Spaces to a String
 ## Solution Workflow
-Initial Setup:
+
 
 A HashSet (set) is populated with the indices from the spaces array. This allows for quick checking of whether a space should be added at any given position.
 Iterating Over the String:
