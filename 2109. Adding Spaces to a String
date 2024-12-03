@@ -22,3 +22,19 @@ class Solution {
         return makeString (stack);
     }
 }
+
+#2109. Adding Spaces to a String
+## Solution Workflow
+Initial Setup:
+
+A HashSet (set) is populated with the indices from the spaces array. This allows for quick checking of whether a space should be added at any given position.
+Iterating Over the String:
+
+We iterate over each character of the input string s using an index counter to track the current position in the string.
+For each character, we check if the current index exists in the set of spaces. If it does, we first push a space ' ' into the stack before pushing the actual character.
+Constructing the Final String:
+
+Once the characters and spaces are pushed onto the stack, the makeString function is called to convert the stack back into a string. This is done by popping all characters and spaces from the stack and appending them to a StringBuilder.
+Result:
+
+Finally, the string is returned after converting it from the StringBuilder to a regular string.
